@@ -15,13 +15,13 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @Column(length = 15,name = "phoneNumber")
+    @Column(name = "phoneNumber")
     private Integer phoneNumber;
-    @Column(length = 50,name = "username")
+    @Column(name = "username")
     private String username;
-    @Column(length = 20,name = "password")
+    @Column(name = "password")
     private String password;
-    @Column(length = 50,unique = true)
+    @Column(unique = true)
     private String email;
 
 

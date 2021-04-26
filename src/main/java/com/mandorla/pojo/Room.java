@@ -5,10 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "room")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -16,11 +19,9 @@ import javax.persistence.Id;
 public class Room {
 
     @Id
-    private Integer roomNo;
+    @Column(length = 5,name = "roomNo")
+    private String roomNo;
+    @Column(length = 10,name = "price")
     private Integer price;
-    private Float bedSize; // 1.2, 1.5, 1.8
-    private Integer bedNo; // number of bed in the room
-    private Integer capacity; // the max numbers of living people in this room
-    private Integer squareMeter;
 
 }
